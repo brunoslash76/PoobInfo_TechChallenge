@@ -12,9 +12,9 @@ app.use(express_validator());
 
 consign()
     .include('app/routes')
-    .then('app/modules')
     .then('app/controllers')
     .then('app/models')
+    .then('app/dao')
     .into(app);
 
 module.exports = app;
